@@ -3,4 +3,20 @@ body {
     background: url(kid-goku-and-shenron-dragon-ball-moewalls-com-ezgif.com-video-to-gif-converter.gif) no-repeat center center fixed;
     height: 100vh;
     background-size: cover;
+    padding-top: 100px;
+}
+.navbar {
+     position: fixed;   
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8); 
+      border-bottom: 3px solid black;     
+      display: flex;
+      justify-content: center; 
+      z-index: 1000;
+      height: 20px;
+}
+h1 {
+    
 }
