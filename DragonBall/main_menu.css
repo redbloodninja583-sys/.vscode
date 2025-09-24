@@ -17,6 +17,16 @@ body {
       z-index: 1000;
       height: 20px;
 }
-h1 {
+img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    position: fixed;
     
+}
+.image_gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
