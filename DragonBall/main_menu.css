@@ -30,3 +30,8 @@ img {
     justify-content: center;
     align-items: center;
 }
+.content {
+      display: flex;
+      flex-direction: column; /* stack items vertically */
+      align-items: center;    /* center them horizontally */
+ }
