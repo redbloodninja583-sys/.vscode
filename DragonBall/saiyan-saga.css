@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://vignette.wikia.nocookie.net/dragonball/images/c/c2/Gizard_Wasteland_DBZ_Ep_33_003.png/revision/latest?cb=20170827060816);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
