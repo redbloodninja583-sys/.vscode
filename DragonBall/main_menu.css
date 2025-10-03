@@ -17,11 +17,14 @@ body {
       z-index: 1000;
       height: 20px;
 }
-img {
+img:hover {
     width: 400px;
     height: auto;
     border-radius: 8px;
     margin: 20px 0;
+     scale: (1.05);
+    box-shadow: 0 0 20px 5px rgba(255, 69, 0, 0.9);
+    z-index: 10;
     
     
 }

@@ -7,5 +7,51 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    text-align: center;
     
+    
+    
+}
+h1 {
+    color: aliceblue;
+}
+p {
+    margin: auto;
+    max-width: 700px;
+    color: antiquewhite;
+}
+.Saiyans img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: -100px;
+    margin-right: 100px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    
+   
+}
+.Saiyans img:hover {
+    scale: (1.05);
+    box-shadow: 0 0 20px 5px rgba(255, 69, 0, 0.9);
+    z-index: 10;
+
+}
+.Saiyans {
+    max-width: 700;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    
+}
+.navbar {
+     position: fixed;   
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8); 
+      border-bottom: 3px solid black;     
+      display: flex;
+      justify-content: center; 
+      z-index: 1000;
+      height: 20px;
 }
