@@ -1,40 +1,115 @@
+/* --- GLOBAL STYLES & BACKGROUND --- */
 body {
-    margin: 0;
-    background: url(kid-goku-and-shenron-dragon-ball-moewalls-com-ezgif.com-video-to-gif-converter.gif) no-repeat center center fixed;
-    height: 100vh;
+    margin: 0 !important;
+    /* Parallax effect from 'fixed' attachment */
+    background: url(kid-goku-and-shenron-dragon-ball-moewalls-com-ezgif.com-video-to-gif-converter.gif) no-repeat center center fixed; 
     background-size: cover;
-    padding-top: 100px;
+    padding-top: 60px; /* Space for the fixed navbar */
+    font-family: 'Arial', sans-serif; /* Professional font */
 }
+
+/* --- NAVIGATION BAR --- */
+/* --- NAVIGATION BAR --- */
 .navbar {
-     position: fixed;   
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.8); 
-      border-bottom: 3px solid black;     
-      display: flex;
-      justify-content: center; 
-      z-index: 1000;
-      height: 20px;
-}
-img:hover {
-    width: 400px;
-    height: auto;
-    border-radius: 8px;
-    margin: 20px 0;
-     scale: (1.05);
-    box-shadow: 0 0 20px 5px rgba(255, 69, 0, 0.9);
-    z-index: 10;
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; 
     
+    /* CHANGE THIS LINE: Make background completely opaque black */
+    background-color: black; /* Changed from rgba(0, 0, 0, 0.85) to solid black */
     
-}
-.image_gallery {
+    border-bottom: 3px solid gold; 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: center; 
+    justify-content: center; 
+    z-index: 1000;
 }
-.content {
-      display: flex;
-      flex-direction: column; /* stack items vertically */
-      align-items: center;    /* center them horizontally */
- }
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0 25px;
+    transition: color 0.2s; /* Smooth color change */
+}
+
+.navbar a:hover {
+    color: gold; /* Glow effect on hover */
+}
+
+/* --- MAIN CONTENT BOX (The key to professionalism) --- */
+.main-content-box {
+    background-color: rgba(0, 0, 0, 0.75); /* Dark, transparent background */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 900px; /* Wide enough for content */
+    margin: 0px auto 40px auto; /* Centered with top/bottom margin */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8); /* Strong shadow for depth */
+}
+
+/* --- TYPOGRAPHY --- */
+h1 {
+    color: gold; /* Main title color */
+    font-size: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 5px; /* Spacing for epic feel */
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px black; /* Subtle glow effect */
+}
+
+.subtitle {
+    color: #ccc; /* Slightly gray subtitle */
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 40px auto; /* Centers and adds space below */
+    line-height: 1.6;
+}
+
+/* --- SAGA LINKS SECTION --- */
+.saga-links-container {
+    display: flex;
+    justify-content: space-around; /* Space between the saga blocks */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin-top: 30px;
+}
+
+.saga-link {
+    width: 45%; /* Takes up less than half the container width */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.saga-link a {
+    display: block; /* Makes the entire image clickable */
+}
+
+.saga-link img {
+    width: 100%; /* Fill the width of its parent (.saga-link) */
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 3px solid #ff4500; /* Orange border (like a blast) */
+    
+    /* Smooth transition for the glow/scale */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* --- HOVER EFFECT --- */
+.saga-link img:hover {
+    transform: scale(1.05); /* Scales up slightly */
+    box-shadow: 0 0 25px 8px #ff4500; /* Stronger aura glow (Red-Orange) */
+    border-color: gold; /* Change border color too */
+    z-index: 10;
+}
+
+.saga-title {
+    color: #ff4500; /* Orange/Red color for link titles */
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

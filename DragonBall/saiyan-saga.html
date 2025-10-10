@@ -1,45 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saiyan Saga</title>
     <link rel="stylesheet" href="saiyan-saga.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&display=swap" rel="stylesheet">
+   
 </head>
 <body>
-    <audio src=""></audio>
-    <h1>Saiyan Saga!</h1>
     
+    <div class="navbar">
+        <a href="main_menu.html" class="logo-link">
+            <img src="https://logos-world.net/wp-content/uploads/2021/02/Dragon-Ball-Logo.png" alt="Dragon Ball Logo" class="navbar-logo">
+        </a>
+        <a href="main_menu.html">Home</a>
+        <a href="#about">About Me</a>
+    </div>
+
+    <button id="music-toggle" class="music-button">
+        🎧 Play Music
+    </button>
     
-    <p>
-The Saiyan Saga begins with the shocking arrival of Raditz, who reveals that Goku is actually an alien warrior named Kakarot and that two much stronger Saiyans, Vegeta and Nappa, are coming to Earth.
-
-Goku is forced to team up with his enemy, Piccolo, a temporary alliance that results in both of them being killed to defeat Raditz. The surviving Z Fighters spend a year training while Goku traverses Snake Way to train with King Kai.
-
-The villains arrive, and Nappa brutally kills several heroes, including Piccolo, until Goku finally returns with the Kaio-ken technique.
-
-The saga climaxes in a legendary, destructive battle between Goku and Vegeta, who pushes the fight to his Great Ape transformation.
-
-Ultimately, the Saiyan Prince is defeated only through the combined efforts of Goku's friends and the Spirit Bomb, and he retreats to space, vowing revenge.</p>
-<div class="Saiyans">
-    <img src="https://tse4.mm.bing.net/th/id/OIP.xgT21kG5R5TD0cVVSY0qtQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
-</div>
-<div class="navbar">
-    <a href="main_menu.html">Home</a>
-    
-    
-    <a href="#about">About Me</a>
     <audio id="saiyan-saga-theme" autoplay loop muted>
-    <source src="Dragon Ball Z Dokkan Battle_ LR Kaioken Goku Intro OST (Extended).mp3" type="audio/mpeg">
-    
-</audio>
+        <source src="Dragon Ball Z Dokkan Battle_ LR Kaioken Goku Intro OST (Extended).mp3" type="audio/mpeg">
+    </audio>
 
-<button id="music-toggle" style="position: fixed; top: 10px; right: 10px; z-index: 100; padding: 10px; background: darkred; color: white; border: none; cursor: pointer;">
-    🎧 Play Music
-</button>
+    <div class="saga-content-box">
+        
+        <header>
+            <h1>Saiyan Saga!</h1>
+        </header>
+        
+        <div class="saga-text-container">
+            <p>
+                The Saiyan Saga begins with the shocking arrival of Raditz, who reveals that Goku is actually an alien warrior named Kakarot and that two much stronger Saiyans, Vegeta and Nappa, are coming to Earth.
+            </p>
+            <p>
+                Goku is forced to team up with his enemy, Piccolo, a temporary alliance that results in both of them being killed to defeat Raditz. The surviving Z Fighters spend a year training while Goku traverses Snake Way to train with King Kai.
+            </p>
+            <p>
+                The villains arrive, and Nappa brutally kills several heroes, including Piccolo, until Goku finally returns with the Kaio-ken technique.
+            </p>
+            <p>
+                The saga climaxes in a legendary, destructive battle between Goku and Vegeta, who pushes the fight to his Great Ape transformation.
+            </p>
+            <p>
+                Ultimately, the Saiyan Prince is defeated only through the combined efforts of Goku's friends and the Spirit Bomb, and he retreats to space, vowing revenge.
+            </p>
+        </div>
+        
+        <div class="Saiyans">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.xgT21kG5R5TD0cVVSY0qtQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Raditz and Nappa">
+        </div>
 
+    </div>
 
-    
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('saiyan-saga-theme');
+            const toggleButton = document.getElementById('music-toggle');
+            
+            // Initial button state (since it starts muted)
+            toggleButton.textContent = '🔇 Music Off';
+            toggleButton.style.backgroundColor = 'darkred';
+
+            function tryPlayAudio() {
+                const playPromise = audio.play();
+
+                if (playPromise !== undefined) {
+                    playPromise.then(_ => {
+                        console.log("Muted autoplay started successfully.");
+                    }).catch(error => {
+                        console.warn("Autoplay was blocked.");
+                    });
+                }
+            }
+            
+            tryPlayAudio();
+            
+            toggleButton.addEventListener('click', () => {
+                // If the audio is currently muted or paused, unmute and play
+                if (audio.muted || audio.paused) {
+                    audio.muted = false;
+                    audio.play(); 
+                    toggleButton.textContent = '🔊 Music On';
+                    toggleButton.style.backgroundColor = 'darkgreen';
+                } else {
+                    // Mute and Pause (Optional: Pause is better than just Muting)
+                    audio.muted = true;
+                    // audio.pause(); // You can pause if you prefer to stop loading/looping
+                    toggleButton.textContent = '🔇 Music Off';
+                    toggleButton.style.backgroundColor = 'darkred';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

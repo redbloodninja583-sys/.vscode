@@ -1,57 +1,139 @@
+/* --- GLOBAL STYLES & BACKGROUND --- */
 body {
     margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-    background-image: url(https://vignette.wikia.nocookie.net/dragonball/images/c/c2/Gizard_Wasteland_DBZ_Ep_33_003.png/revision/latest?cb=20170827060816);
+    padding-top: 50px; /* Space for the fixed navbar (50px height) */
+    font-family: 'Arial', sans-serif;
+    
+    background-image: url('https://vignette.wikia.nocookie.net/dragonball/images/c/c2/Gizard_Wasteland_DBZ_Ep_33_003.png/revision/latest?cb=20170827060816');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     text-align: center;
-    
-    
-    
+    min-height: 100vh; /* Ensure body takes up full height */
 }
+
+/* --- NAVIGATION BAR --- */
+.navbar {
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Set a consistent height */
+    
+    /* Make it solid black to eliminate top gap */
+    background-color: black; 
+    
+    /* Use themed colors */
+    border-bottom: 3px solid #ff4500; /* Orange/Red border theme */
+    
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    z-index: 1000;
+}
+.navbar {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; 
+    
+    background-color: black; 
+    border-bottom: 3px solid #ff4500; 
+    
+    /* CHANGE: Align items to space them out */
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; /* This pushes the logo left and links right */
+    
+    z-index: 1000;
+    padding: 0 20px; /* Add padding on the left/right edges */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0 25px;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: gold; 
+}
+
+/* --- MUSIC TOGGLE BUTTON --- */
+.music-button {
+    position: fixed; 
+    top: 10px; 
+    right: 10px; 
+    z-index: 1001; /* Must be above the navbar */
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.saga-content-box {
+    /* NEW: Dark, reddish background to match the environment */
+    background-color: rgba(50, 25, 0, 0.85); 
+    padding: 30px; 
+    border-radius: 15px;
+    max-width: 850px; 
+    margin: 30px auto; 
+    
+    /* NEW: Add a visible, glowing shadow for a unique look */
+    box-shadow: 0 0 40px rgba(255, 69, 0, 0.6), 0 0 15px rgba(0, 0, 0, 0.9); 
+    border: 3px solid gold; /* New border color */
+    text-align: center;
+}
+
+/* --- TYPOGRAPHY --- */
 h1 {
-    color: aliceblue;
+    color: gold; /* Themed title color */
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 0; /* Remove default margin at the top of the box */
+    text-shadow: 0 0 5px black;
 }
-p {
-    margin: auto;
+
+.saga-text-container {
+    /* Use a dedicated container for text spacing */
+    padding: 0 20px;
+}
+
+.saga-text-container p {
+    color: #ccc; /* Slightly off-white for softer reading */
+    font-size: 1.1em;
+    line-height: 1.7; /* CRUCIAL for readability */
+    text-align: center; /* Center the text for this style */
+    margin: 15px auto;
+}
+
+/* --- IMAGE BLOCK --- */
+.Saiyans {
     max-width: 700px;
-    color: antiquewhite;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
 }
+
 .Saiyans img {
     width: 250px;
     height: auto;
     border-radius: 8px;
-    margin-left: -100px;
-    margin-right: 100px;
+    border: 4px solid #ff4500; /* Themed border */
+    /* Removed margin-left/right to keep it centered */
+    
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    
-   
 }
-.Saiyans img:hover {
-    scale: (1.05);
-    box-shadow: 0 0 20px 5px rgba(255, 69, 0, 0.9);
-    z-index: 10;
 
-}
-.Saiyans {
-    max-width: 700;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    
-}
-.navbar {
-     position: fixed;   
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.8); 
-      border-bottom: 3px solid black;     
-      display: flex;
-      justify-content: center; 
-      z-index: 1000;
-      height: 20px;
+.Saiyans img:hover {
+    transform: scale(1.05); /* Use transform for scaling */
+    box-shadow: 0 0 25px 8px gold; /* Stronger glow on hover */
+    z-index: 10;
 }
