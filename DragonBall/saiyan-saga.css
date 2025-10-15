@@ -63,6 +63,15 @@ body {
     color: gold; 
 }
 
+
+.navbar-logo {
+    height: 60px; 
+    width: auto;
+    
+    background-color: transparent; 
+}
+
+
 /* --- MUSIC TOGGLE BUTTON --- */
 .music-button {
     position: fixed; 
