@@ -127,7 +127,9 @@ h1 {
 .Saiyans {
     max-width: 700px;
     margin: 30px auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
     justify-content: center;
 }
 
