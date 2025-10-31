@@ -1,3 +1,67 @@
 body {
+    /* Set the background image (Namek) */
     background-image: url(https://storage.googleapis.com/cdn.vcgamers.com/news/wp-content/uploads/2023/10/planet-namek.png);
+    /* Ensure the image covers the whole background */
+    background-size: cover;
+    /* Fix the background so it doesn't scroll with the content */
+    background-attachment: fixed;
+    /* Center the background image */
+    background-position: center;
+    /* Set a default text color for the whole page */
+    color: #4c220f; /* A deep reddish-brown color from the Saiyan Saga example */
+    /* Remove default body margin */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Use a readable font */
 }
+
+.saga-text-container {
+    /* Centers the block on the page */
+    margin: 50px auto; 
+    /* Sets the width of the box */
+    width: 80%;
+    max-width: 900px;
+    /* Adds padding inside the box for content space */
+    padding: 30px; 
+    /* Semi-transparent background (RGBA format) */
+    background-color: rgba(255, 255, 255, 0.85); /* White with 85% opacity */
+    /* Rounded corners */
+    border-radius: 10px;
+    /* Subtle box shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    /* Aligns the text content to the center */
+    text-align: center;
+}
+
+/* Style the individual paragraphs inside the container */
+.saga-text-container p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: left; /* Align the text paragraphs to the left */
+}
+.saga-title {
+    background-color: #cc8800; /* The orange/gold color from the example */
+    color: white;
+    padding: 10px 20px;
+    margin-top: -50px; /* Pulls the title box slightly above the main text container border */
+    margin-bottom: 20px;
+    display: inline-block; /* Wraps the background tightly around the text */
+    text-align: center;
+    border-radius: 5px;
+    font-size: 2.5em;
+    border: 3px solid #4c220f; /* Dark border */
+}
+.navbar {
+            background-color: #4c220f;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 4px solid #cc8800;
+        }
+
+.navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 20px;
+            display: inline-block;
+        }
