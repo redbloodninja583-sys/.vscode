@@ -1,67 +1,115 @@
+/* --- Global Styles --- */
 body {
     /* Set the background image (Namek) */
     background-image: url(https://storage.googleapis.com/cdn.vcgamers.com/news/wp-content/uploads/2023/10/planet-namek.png);
-    /* Ensure the image covers the whole background */
     background-size: cover;
-    /* Fix the background so it doesn't scroll with the content */
     background-attachment: fixed;
-    /* Center the background image */
     background-position: center;
-    /* Set a default text color for the whole page */
-    color: #4c220f; /* A deep reddish-brown color from the Saiyan Saga example */
-    /* Remove default body margin */
+    color: white; /* Changed default text color to white for contrast on the gold card */
     margin: 0;
-    font-family: Arial, sans-serif; /* Use a readable font */
+    font-family: Arial, sans-serif;
 }
 
+/* --- Navigation Bar --- */
+.navbar {
+    background-color: #4c220f; /* Dark reddish-brown */
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 4px solid #cc8800; /* Gold/Orange */
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+/* --- Main Card Container --- */
 .saga-text-container {
-    /* Centers the block on the page */
     margin: 50px auto; 
-    /* Sets the width of the box */
     width: 80%;
     max-width: 900px;
-    /* Adds padding inside the box for content space */
-    padding: 30px; 
-    /* Semi-transparent background (RGBA format) */
-    background-color: rgba(255, 255, 255, 0.85); /* White with 85% opacity */
-    /* Rounded corners */
-    border-radius: 10px;
-    /* Subtle box shadow for depth */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    /* Aligns the text content to the center */
+    padding: 30px;
+    background-color: #cc8800; 
+    border-radius: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
     text-align: center;
 }
 
-/* Style the individual paragraphs inside the container */
 .saga-text-container p {
     line-height: 1.6;
     margin-bottom: 15px;
-    text-align: left; /* Align the text paragraphs to the left */
+    text-align: center; 
 }
+
+/* --- Title Style --- */
 .saga-title {
-    background-color: #cc8800; /* The orange/gold color from the example */
+    background-color: #4c220f; 
     color: white;
     padding: 10px 20px;
-    margin-top: -50px; /* Pulls the title box slightly above the main text container border */
-    margin-bottom: 20px;
-    display: inline-block; /* Wraps the background tightly around the text */
+    margin-top: 0; 
+    margin-bottom: 30px;
+    display: inline-block;
     text-align: center;
     border-radius: 5px;
     font-size: 2.5em;
-    border: 3px solid #4c220f; /* Dark border */
+    border: none;
 }
-.navbar {
-            background-color: #4c220f;
-            padding: 10px 0;
-            text-align: center;
-            border-bottom: 4px solid #cc8800;
-        }
 
-.navbar a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
-            padding: 10px 20px;
-            display: inline-block;
-        }
+/* --- Image Grid Styles --- */
+
+.character-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Styling for the outer frame of the image card */
+.character-card {
+    border: 5px solid #cc8800; /* Gold/Orange Frame */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 5px; /* Space between the gold frame and the inner image */
+    background-color: black; /* To make the image background dark */
+    /* Add a fixed height to the card to make sure images fill it */
+    height: 350px; /* Adjust this height as needed to make cards square or rectangular */
+    display: flex; /* Use flexbox to center the image if it doesn't perfectly fill */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide any overflow if image aspect ratio is off */
+}
+
+/* Styling for the image itself */
+.character-card img {
+    width: 100%;
+    /* CRITICAL FIX: Make image fill the height of its container */
+    height: 100%; 
+    display: block;
+    border: 2px solid black; 
+    /* CRITICAL FIX: Ensure the image covers the entire area, potentially cropping */
+    object-fit: cover; 
+}
+
+.Dragon-Ball-Logo {
+    /* Use the same dark color as your existing navbar */
+    background-color: #4c220f; 
+    border-bottom: 4px solid #cc8800;
+    
+    /* Use Flexbox to position items side-by-side */
+    display: flex;
+    justify-content: space-between; /* Pushes the logo to the left and the navbar link/menu to the right/center */
+    align-items: center; /* Vertically centers items */
+    padding: 0 15px; /* Add padding to the sides */
+    height: 60px; /* Set a fixed height for the bar */
+}
+
+/* --- Logo Styling --- */
+.logo {
+    height: 80%; /* Make the logo take up most of the header height */
+    width: auto;
+    /* Move it slightly to the left if needed */
+    margin-right: auto;
+}
