@@ -20,6 +20,18 @@
     padding: 0 20px; 
     height: 50px;
 }
+.music-button {
+    position: fixed; 
+    top: 10px; 
+    right: 10px; 
+    z-index: 1001; /* Must be above the navbar */
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
 
 .logo {
     height: 80%; 
